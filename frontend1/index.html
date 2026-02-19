@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyay Sakhi | Ray of Hope</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --card-dark: #111111;
+            --hope-orange: #f97316;
+            --gold-glow: #fbbf24;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            /* Creating the "Ray of Hope" background effect */
+            background-image: radial-gradient(circle at 50% -20%, #2a1b0a 0%, var(--bg-dark) 80%);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 480px;
+            height: 90vh;
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(249, 115, 22, 0.05);
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--hope-orange);
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
+        }
+
+        .header p {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .chat-window {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--hope-orange) transparent;
+        }
+
+        .msg {
+            margin-bottom: 20px;
+            padding: 14px 18px;
+            border-radius: 18px;
+            max-width: 85%;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .user-msg {
+            background: linear-gradient(135deg, var(--hope-orange), #ea580c);
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
+        }
+
+        .bot-msg {
+            background: var(--card-dark);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom-left-radius: 4px;
+        }
+
+        /* The Law Result Cards */
+        .law-result-card {
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 15px;
+            background: rgba(249, 115, 22, 0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .law-result-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--hope-orange);
+        }
+
+        .law-result-card small {
+            color: var(--hope-orange);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+        }
+
+        .law-name {
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            color: var(--pure-white);
+            display: block;
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .law-result-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 10px 0;
+        }
+
+        .law-result-card ul {
+            padding-left: 20px;
+            margin: 10px 0 0;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .law-result-card li {
+            margin-bottom: 6px;
+        }
+
+        .input-group {
+            padding: 20px;
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #333;
+            color: white;
+            outline: none;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--hope-orange);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(to right, var(--hope-orange), var(--gold-glow));
+            color: #000;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+        }
+
+        button:disabled {
+            background: #333;
+            color: #666;
+            cursor: not-allowed;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Motivational tag */
+        .motivation {
+            font-size: 0.75rem;
+            color: var(--hope-orange);
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header">
+        <h1>Nyay Sakhi</h1>
+        <p>A Ray of Hope for Justice</p>
+    </div>
+
+    <div id="chatWindow" class="chat-window">
+        <div class="msg bot-msg">
+            Namaste. I am your <b>Nyay Sakhi</b>. You are not alone. Please describe your situation, and let us find the legal path forward together.
+        </div>
+    </div>
+
+    <div class="input-group">
+        <input id="problemInput" placeholder="Share your concern with me..." autocomplete="off"/>
+        <button id="askBtn">Seek Justice</button>
+        <div class="motivation">"Courage is the first step towards justice."</div>
+    </div>
+</div>
+
+<script>
+const chatWindow = document.getElementById("chatWindow");
+const input = document.getElementById("problemInput");
+const btn = document.getElementById("askBtn");
+
+btn.addEventListener("click", () => {
+    const text = input.value.trim();
+    if (!text) return;
+
+    // User message UI
+    const userDiv = document.createElement("div");
+    userDiv.className = "msg user-msg";
+    userDiv.innerText = text;
+    chatWindow.appendChild(userDiv);
+
+    input.value = "";
+    btn.disabled = true;
+    btn.innerText = "Finding Hope...";
+
+    // 🔹 BACKEND LOGIC UNCHANGED
+    fetch("/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ problem: text })
+    })
+    .then(res => res.json())
+    .then(data => {
+        btn.disabled = false;
+        btn.innerText = "Seek Justice";
+
+        const botDiv = document.createElement("div");
+        botDiv.className = "msg bot-msg";
+
+        let lawsHtml = "";
+
+        // 🔹 Loop through multiple laws as per your logic
+        data.forEach(law => {
+            const actionsHtml = law.actions.map(a => `<li>${a}</li>`).join("");
+
+            lawsHtml += `
+                <div class="law-result-card">
+                    <small>${law.category}</small>
+                    <span class="law-name">${law.law_name}</span>
+                    <p>${law.description}</p>
+                    <b style="color: var(--hope-orange); font-size: 0.8rem;">Steps to take:</b>
+                    <ul>${actionsHtml}</ul>
+                </div>
+            `;
+        });
+
+        botDiv.innerHTML = `
+            <div>I have found these legal provisions to support you:</div>
+            ${lawsHtml}
+            <div style="margin-top:10px; font-size:0.8rem; opacity:0.7;">Remember, knowledge is your power. Stay strong.</div>
+        `;
+
+        chatWindow.appendChild(botDiv);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+    })
+    .catch(() => {
+        btn.disabled = false;
+        btn.innerText = "Seek Justice";
+
+        const errDiv = document.createElement("div");
+        errDiv.className = "msg bot-msg";
+        errDiv.innerText = "The path is momentarily blocked. Please try again, Sister.";
+        chatWindow.appendChild(errDiv);
+    });
+});
+
+// Allow Enter key to submit
+input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") btn.click();
+});
+</script>
+
+</body>
+</html>

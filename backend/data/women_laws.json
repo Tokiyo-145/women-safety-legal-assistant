@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "law_name": "Protection of Women from Domestic Violence Act, 2005",
+    "section": "Full Act",
+    "category": "Domestic Violence",
+    "description": "Protects women from physical, emotional, sexual, verbal and economic abuse by husband or family members.",
+    "keywords": ["husband beating", "domestic abuse", "mental torture", "family violence", "emotional abuse", "economic abuse"],
+    "why_applicable": "Applies when a woman faces abuse or violence from husband or family members at home.",
+    "punishment": "Protection order, residence order, monetary relief, custody orders.",
+    "actions": [
+      "Contact Protection Officer",
+      "File complaint at local police station",
+      "Approach Magistrate Court",
+      "Call Women Helpline 181"
+    ],
+    "helpline": "181"
+  },
+  {
+    "id": 2,
+    "law_name": "BNS Section 85 (Earlier IPC 498A)",
+    "category": "Cruelty by Husband or Relatives",
+    "description": "Husband or his relatives subjecting a woman to cruelty or harassment for dowry.",
+    "keywords": ["dowry demand", "husband harassment", "in-laws torture", "dowry pressure"],
+    "why_applicable": "Applies when harassment or cruelty is linked with dowry demands.",
+    "punishment": "Imprisonment up to 3 years and fine.",
+    "actions": ["File FIR", "Approach Women Cell", "Collect evidence of harassment"],
+    "helpline": "1091"
+  },
+  {
+    "id": 3,
+    "law_name": "Sexual Harassment of Women at Workplace Act, 2013",
+    "category": "Workplace Harassment",
+    "description": "Protection against sexual harassment at workplace.",
+    "keywords": ["office harassment", "boss harassment", "workplace abuse", "unwanted touch office"],
+    "why_applicable": "Applies when harassment occurs in professional or workplace environment.",
+    "punishment": "Employer liable to take disciplinary action.",
+    "actions": ["Report to ICC", "Submit complaint", "Escalate to Local Committee"],
+    "helpline": "181"
+  },
+  {
+    "id": 4,
+    "law_name": "Prohibition of Child Marriage Act, 2006",
+    "category": "Child Marriage",
+    "description": "Prohibits marriage where girl is below 18 years.",
+    "keywords": ["child marriage", "minor marriage", "underage marriage"],
+    "why_applicable": "Applies when marriage involves a minor girl.",
+    "punishment": "Imprisonment up to 2 years and fine.",
+    "actions": ["Inform police", "Contact Childline 1098", "Approach Child Welfare Committee"],
+    "helpline": "1098"
+  },
+  {
+    "id": 5,
+    "law_name": "Dowry Prohibition Act, 1961",
+    "category": "Dowry",
+    "description": "Giving or taking dowry is punishable offence.",
+    "keywords": ["dowry demand", "marriage money demand", "dowry harassment"],
+    "why_applicable": "Applies when money or property is demanded during marriage.",
+    "punishment": "Imprisonment up to 5 years and fine.",
+    "actions": ["File complaint", "Gather proof", "Approach Women Cell"],
+    "helpline": "1091"
+  },
+  {
+    "id": 6,
+    "law_name": "BNS Section 74 (Earlier IPC 354)",
+    "category": "Molestation",
+    "description": "Assault or criminal force to outrage modesty.",
+    "keywords": ["molestation", "touching inappropriately", "physical harassment"],
+    "why_applicable": "Applies when a woman faces unwanted physical contact or assault.",
+    "punishment": "1 to 5 years imprisonment and fine.",
+    "actions": ["File FIR", "Preserve evidence", "Seek legal help"],
+    "helpline": "112"
+  },
+  {
+    "id": 7,
+    "law_name": "BNS Section 79 (Earlier IPC 509)",
+    "category": "Verbal Harassment",
+    "description": "Insulting modesty through words or gestures.",
+    "keywords": ["verbal abuse", "obscene comments", "catcalling"],
+    "why_applicable": "Applies when harassment is verbal or through gestures.",
+    "punishment": "Up to 3 years imprisonment and fine.",
+    "actions": ["File complaint", "Collect witnesses", "Record evidence"],
+    "helpline": "112"
+  },
+  {
+    "id": 8,
+    "law_name": "IT Act Section 66E & 67",
+    "category": "Cyber Crime",
+    "description": "Publishing private images or obscene content online.",
+    "keywords": ["online harassment", "revenge porn", "cyber stalking", "blackmail"],
+    "why_applicable": "Applies when harassment happens through internet or social media.",
+    "punishment": "Imprisonment up to 3 years and fine.",
+    "actions": ["Report on cybercrime portal", "Take screenshots", "File cyber FIR"],
+    "helpline": "1930"
+  },
+  {
+    "id": 9,
+    "law_name": "POCSO Act, 2012",
+    "category": "Child Sexual Abuse",
+    "description": "Protects children below 18 from sexual offences.",
+    "keywords": ["child abuse", "minor sexual assault", "child molestation"],
+    "why_applicable": "Applies when victim is a minor.",
+    "punishment": "Rigorous imprisonment.",
+    "actions": ["Inform police", "Contact Childline 1098", "Ensure child safety"],
+    "helpline": "1098"
+  },
+  {
+    "id": 10,
+    "law_name": "Immoral Traffic Prevention Act",
+    "category": "Human Trafficking",
+    "description": "Prevents trafficking and exploitation of women.",
+    "keywords": ["trafficking", "forced prostitution", "kidnapping for exploitation"],
+    "why_applicable": "Applies when a woman is forced into exploitation or trafficking.",
+    "punishment": "Imprisonment up to 7 years or more.",
+    "actions": ["Call police", "Contact NGO", "Ensure safety"],
+    "helpline": "112"
+  },
+  {
+    "id": 11,
+    "law_name": "Maternity Benefit Act, 1961",
+    "category": "Workplace Rights",
+    "description": "Provides maternity leave and benefits to women employees.",
+    "keywords": ["maternity leave denied", "pregnancy discrimination", "job loss pregnancy"],
+    "why_applicable": "Applies when employer denies maternity rights.",
+    "punishment": "Fine or imprisonment for employer.",
+    "actions": ["File complaint to labor office", "Approach HR"],
+    "helpline": "181"
+  },
+  {
+    "id": 12,
+    "law_name": "Equal Remuneration Act, 1976",
+    "category": "Workplace Discrimination",
+    "description": "Ensures equal pay for equal work.",
+    "keywords": ["unequal salary", "gender pay gap", "less salary women"],
+    "why_applicable": "Applies when women are paid less than men for same work.",
+    "punishment": "Employer liable for penalty.",
+    "actions": ["File complaint with labor commissioner"],
+    "helpline": "181"
+  }
+]
